@@ -1,11 +1,16 @@
-import React from "react";
+import Hero from '@/components/home/hero'
+import Pricing from '@/components/home/pricing'
+import Solution from '@/components/home/solution'
+import React from 'react'
 
 const Home = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <h1 className="text-9xl">Home</h1>
+    <div className="mb-40 space-y-40 overflow-hidden">
+      <Hero />
+      <Solution/>
+      <Pricing/>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -8,13 +8,18 @@ import { useScroll } from 'motion/react'
 import { Menu, X } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import ElysianEmporiumLogo from '@/components/ui/emporium-ecommerce-logo'
+import ElysianEmporiumLogo from '@/components/ui/emporium-ecommerce-svg'
+import { ThemeSwitcher } from '@/components/ui/theme-switcher'
 
 import { menuItems } from '@/data/constants/navigation-items'
 
 import { cn } from '@/lib/utils'
+import { authClient } from '@/lib/auth-client'
+import NotificationMenu from '../notification/notification-menu'
+import UserDropdown from '../user/user-dropdown'
 
 const NavigationMenu = () => {
+  const { data: session, isPending } = authClient.useSession()
   const [menuState, setMenuState] = React.useState(false)
   const [scrolled, setScrolled] = React.useState(false)
 
@@ -35,7 +40,7 @@ const NavigationMenu = () => {
           scrolled && 'bg-background/50 backdrop-blur-3xl'
         )}
       >
-        <div className="mx-auto  px-6 transition-all duration-300">
+        <div className="mx-auto px-6 transition-all duration-300">
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
             <div className="flex w-full items-center justify-between gap-12 lg:w-auto">
               <Link href="/" aria-label="home" className="flex items-center space-x-2">
@@ -55,10 +60,7 @@ const NavigationMenu = () => {
                 <ul className="flex gap-8 text-sm">
                   {menuItems.map((item, index) => (
                     <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="block duration-150"
-                      >
+                      <Link href={item.href} className="block duration-150">
                         <span>{item.name}</span>
                       </Link>
                     </li>
@@ -72,10 +74,7 @@ const NavigationMenu = () => {
                 <ul className="space-y-6 text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="block duration-150"
-                      >
+                      <Link href={item.href} className="block duration-150">
                         <span>{item.name}</span>
                       </Link>
                     </li>
@@ -83,16 +82,39 @@ const NavigationMenu = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button asChild variant="outline" size="sm">
-                  <Link href="#">
+                <ThemeSwitcher />
+                {session ? (
+                  <>
+                    <NotificationMenu />
+
+
+                    <UserDropdown
+                      email={session.user.email}
+                      image={
+                        session?.user.image ?? `https://avatar.vercel.sh/${session?.user.email}`
+                      }
+                      name={
+                        session?.user.name && session.user.name.length > 0
+                          ? session.user.name
+                          : session?.user.email.split('@')[0]
+                      }
+                    />
+                  </>
+                ) : (
+                  <>
+                 <Button asChild variant="outline">
+                  <Link href="/sign-in">
                     <span>Sign In</span>
                   </Link>
                 </Button>
-                <Button asChild size="sm">
-                  <Link href="#">
+                <Button asChild>
+                  <Link href="/sign-up">
                     <span>Sign Up</span>
                   </Link>
                 </Button>
+                  </>
+                )}
+               
               </div>
             </div>
           </div>

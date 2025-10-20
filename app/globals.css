@@ -1,11 +1,15 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'uploadthing/tw/v4';
+@source '../node_modules/@uploadthing/react/dist';
+@source '../node_modules/@blocknote/shadcn';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-ppneuemontreal-book: var(--font-ppneuemontreal-book);
-  --font-ppneuemontreal-thin: var(--font-ppneuemontreal-thin);
+  --font-aeonik-air: var(--font-aeonik-air);
+  --font-aeonik-mono: var(--font-aeonik-mono);
+  --font-aeonik: var(--font-aeonik);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -80,7 +84,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -103,7 +107,7 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --sidebar: oklch(0 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
@@ -120,4 +124,36 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* lenis smooth scroll config */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+  transition-property: overflow;
+  transition-duration: 1ms;
+  transition-behavior: allow-discrete;
+}
+
+/* blocknote shadcn font */
+.bn-editor,
+.bn-editor * {
+  font-family: var(--font-aeonik), sans-serif;
 }

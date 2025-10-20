@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import ElysianEmporiumLogo from '@/components/ui/emporium-ecommerce-logo'
+import ElysianEmporiumLogo from '@/components/ui/emporium-ecommerce-svg'
 
 import { menuItems } from '@/data/constants/navigation-items'
 
@@ -12,10 +12,10 @@ const FooterMenu = () => {
         <div className="flex flex-wrap justify-between gap-12">
           <div className="order-last flex items-center gap-3 md:order-first">
             <Link href="/" aria-label="go home">
-                <ElysianEmporiumLogo className='size-9 rounded-md'/>
+              <ElysianEmporiumLogo className="size-9 rounded-md" />
             </Link>
             <span className="text-muted-foreground block text-center text-sm">
-              © {new Date().getFullYear()} Tailark Mist, All rights reserved
+              © {new Date().getFullYear()} Emporium Ecommerce Dashboard, All rights reserved
             </span>
           </div>
 

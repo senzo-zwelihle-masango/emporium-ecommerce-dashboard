@@ -18,6 +18,9 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+       'lib/generated/**',
+      'components/event-calendar/calendar-wrapper.tsx',
+       'components/ui/animated-group.tsx',
     ],
   },
 ];
