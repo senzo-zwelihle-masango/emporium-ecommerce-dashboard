@@ -87,7 +87,6 @@ const NavigationMenu = () => {
                   <>
                     <NotificationMenu />
 
-
                     <UserDropdown
                       email={session.user.email}
                       image={
@@ -102,19 +101,18 @@ const NavigationMenu = () => {
                   </>
                 ) : (
                   <>
-                 <Button asChild variant="outline">
-                  <Link href="/sign-in">
-                    <span>Sign In</span>
-                  </Link>
-                </Button>
-                <Button asChild>
-                  <Link href="/sign-up">
-                    <span>Sign Up</span>
-                  </Link>
-                </Button>
+                    <Button asChild variant="outline">
+                      <Link href="/sign-in">
+                        <span>Sign In</span>
+                      </Link>
+                    </Button>
+                    <Button asChild>
+                      <Link href="/sign-up">
+                        <span>Sign Up</span>
+                      </Link>
+                    </Button>
                   </>
                 )}
-               
               </div>
             </div>
           </div>

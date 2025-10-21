@@ -23,7 +23,10 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
-import { acceptInvitationAction, rejectInvitationAction } from '@/server/actions/dashboard/organization'
+import {
+  acceptInvitationAction,
+  rejectInvitationAction,
+} from '@/server/actions/dashboard/organization'
 
 interface User {
   id: string

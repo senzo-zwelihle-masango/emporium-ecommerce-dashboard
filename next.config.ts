@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
-         {
+      {
         protocol: 'https',
         hostname: 'cdn.discordapp.com',
         port: '',
@@ -32,5 +32,3 @@ const nextConfig: NextConfig = {
 }
 
 export default nextConfig
-
-

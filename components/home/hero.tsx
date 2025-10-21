@@ -85,10 +85,9 @@ const Hero = () => {
                   },
                   ...transitionVariants,
                 }}
-               
               >
                 {session ? (
-                  <div  className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+                  <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
                     <div key={1}>
                       <Button asChild size="lg">
                         <Link href="#/dashboard">
@@ -98,7 +97,7 @@ const Hero = () => {
                     </div>
                   </div>
                 ) : (
-                  <div  className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
+                  <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
                     <div key={3}>
                       <Button asChild size="lg">
                         <Link href="/sign-in">
@@ -131,7 +130,7 @@ const Hero = () => {
             }}
           >
             <div className="relative mt-8 -mr-56 overflow-hidden mask-b-from-55% sm:mt-12 sm:mr-0 md:mt-20">
-              <div className="ring-background bg-background relative mx-auto overflow-hidden rounded-2xl border shadow-lg ring-1 inset-shadow-2xs shadow-zinc-950/15 dark:inset-shadow-white/20">
+              <div className="ring-background bg-background relative mx-auto max-w-7xl overflow-hidden rounded-2xl border shadow-lg ring-1 inset-shadow-2xs shadow-zinc-950/15 dark:inset-shadow-white/20">
                 <Image
                   className="bg-background relative hidden rounded-2xl dark:block"
                   src="/images/dashboard-dark.png"

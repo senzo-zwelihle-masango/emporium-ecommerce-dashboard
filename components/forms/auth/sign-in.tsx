@@ -117,7 +117,7 @@ const SignInForm = ({ className, ...props }: React.ComponentProps<'div'>) => {
     })
   }
 
-    const signInWithDiscord = () => {
+  const signInWithDiscord = () => {
     startDiscordTransition(async () => {
       await authClient.signIn.social({
         provider: 'discord',
@@ -276,8 +276,7 @@ const SignInForm = ({ className, ...props }: React.ComponentProps<'div'>) => {
                     </Button>
                   </div>
 
-
-                   <div className="relative">
+                  <div className="relative">
                     {lastLoginMethod === 'discord' && (
                       <Badge
                         variant="default"

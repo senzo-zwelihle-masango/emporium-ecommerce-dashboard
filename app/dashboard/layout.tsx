@@ -16,7 +16,6 @@ const AdminDashboardLayout = async ({ children }: { children: React.ReactNode })
     redirect('/sign-in')
   }
 
-
   return (
     <SidebarProvider>
       <AppSidebar />

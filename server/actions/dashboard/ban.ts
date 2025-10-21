@@ -20,7 +20,7 @@ export async function checkExpiredBansAction(): Promise<ApiResponse> {
 
     // Check if user has a session
     if (!session) {
-      return { status: 'error', message: 'Unauthorized' ,}
+      return { status: 'error', message: 'Unauthorized' }
     }
 
     // Find users with expired bans

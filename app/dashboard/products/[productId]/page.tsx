@@ -314,7 +314,9 @@ const ProductIdRoutePage = async ({ params }: { params: Params }) => {
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg">Product Variants</CardTitle>
                   <Button asChild size="sm">
-                    <Link href={`/dashboard/products/${productPost.id}/swatches`}>Manage Variants</Link>
+                    <Link href={`/dashboard/products/${productPost.id}/swatches`}>
+                      Manage Variants
+                    </Link>
                   </Button>
                 </div>
               </CardHeader>
@@ -324,7 +326,9 @@ const ProductIdRoutePage = async ({ params }: { params: Params }) => {
                     <PackageIcon className="text-muted-foreground mx-auto mb-3 h-12 w-12" />
                     <p className="text-muted-foreground mb-2">No variants added yet</p>
                     <Button asChild size="sm" variant="outline">
-                      <Link href={`/dashboard/products/${productPost.id}/swatches`}>Add Variant</Link>
+                      <Link href={`/dashboard/products/${productPost.id}/swatches`}>
+                        Add Variant
+                      </Link>
                     </Button>
                   </div>
                 ) : (

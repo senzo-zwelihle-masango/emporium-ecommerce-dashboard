@@ -31,6 +31,7 @@ The Admin Dashboard provides a complete management system for ecommerce operatio
 ## Core Features
 
 ### Product Management
+
 - **Product Catalog**: Create, update, and delete products with rich media support
 - **Product Variants**: Manage swatches (colors, sizes, materials, etc.)
 - **Inventory Control**: Real-time stock tracking and management
@@ -39,12 +40,14 @@ The Admin Dashboard provides a complete management system for ecommerce operatio
 - **SEO Optimization**: Meta tags, slugs, and search optimization
 
 ### Category & Brand Management
+
 - **Categories**: Hierarchical category structure with active/inactive states
 - **Brands**: Brand management with logo uploads and product associations
 - **Collections**: Curated product collections for marketing campaigns
 - **Warehouses**: Multi-location inventory management
 
 ### Order Management
+
 - **Order Processing**: Complete order lifecycle management
 - **Status Tracking**: Pending, confirmed, processing, shipped, delivered
 - **Payment Integration**: Multiple payment gateway support
@@ -52,6 +55,7 @@ The Admin Dashboard provides a complete management system for ecommerce operatio
 - **Customer Communication**: Automated order notifications
 
 ### User Administration
+
 - **User Management**: Customer account administration
 - **Role-Based Access**: Administrator, owner, member permissions
 - **Membership Tiers**: Bronze, Silver, Gold, Platinum tier management
@@ -59,6 +63,7 @@ The Admin Dashboard provides a complete management system for ecommerce operatio
 - **User Analytics**: Customer behavior and engagement metrics
 
 ### Content Management
+
 - **Billboards**: Dynamic promotional banners with featured products
 - **Promotions**: Campaign management with brand associations
 - **Documents**: File management system with categorization
@@ -66,6 +71,7 @@ The Admin Dashboard provides a complete management system for ecommerce operatio
 - **Rich Text Editor**: BlockNote integration for content creation
 
 ### Analytics & Reporting
+
 - **Dashboard Overview**: Key performance indicators and metrics
 - **Sales Analytics**: Revenue, orders, and conversion tracking
 - **Product Performance**: Best sellers and inventory insights
@@ -73,12 +79,14 @@ The Admin Dashboard provides a complete management system for ecommerce operatio
 - **Visual Charts**: Interactive data visualization with Recharts
 
 ### Feedback Management
+
 - **Product Reviews**: Customer review moderation and management
 - **Experience Feedback**: Overall platform experience tracking
 - **Rating System**: 5-star rating management and analytics
 - **Feedback Analytics**: Sentiment analysis and insights
 
 ### System Administration
+
 - **Settings Management**: Platform configuration and preferences
 - **Notification System**: Admin alerts and system notifications
 - **Event Calendar**: Business events and scheduling
@@ -124,6 +132,7 @@ app/admin/
 ## Database Models
 
 ### Core Entities
+
 - **User**: Administrator and customer accounts with role-based permissions
 - **Product**: Complete product catalog with variants and inventory
 - **Category**: Hierarchical product categorization
@@ -132,6 +141,7 @@ app/admin/
 - **Membership**: Customer loyalty tier system
 
 ### Content Management
+
 - **Billboard**: Dynamic promotional content with featured products
 - **Collection**: Curated product groupings
 - **Promotion**: Marketing campaigns and brand promotions
@@ -140,6 +150,7 @@ app/admin/
 - **Task**: Administrative task management
 
 ### Analytics & Feedback
+
 - **Review**: Product review system with moderation
 - **Experience**: Platform experience feedback
 - **Notification**: System-wide notification management
@@ -148,12 +159,14 @@ app/admin/
 ## Authentication & Authorization
 
 ### Role-Based Access Control
+
 - **Owner**: Full system access and configuration
 - **Administrator**: Complete admin dashboard access
 - **Member**: Limited administrative functions
 - **User**: Customer-level access (excluded from admin)
 
 ### Security Features
+
 - **Session Management**: Secure session handling with Better Auth
 - **Route Protection**: Admin-only route access control
 - **Permission Validation**: Granular permission checking
@@ -162,6 +175,7 @@ app/admin/
 ## API Integration
 
 ### Admin API Routes
+
 ```
 /api/admin/
 ├── billboard.ts           # Billboard management API
@@ -185,6 +199,7 @@ app/admin/
 ## UI Components
 
 ### Admin-Specific Components
+
 - **Data Tables**: Advanced table components with sorting, filtering, and pagination
 - **Form Components**: Specialized admin forms with validation
 - **Dashboard Widgets**: Analytics cards and metric displays
@@ -193,6 +208,7 @@ app/admin/
 - **Modal Systems**: CRUD operation modals and confirmations
 
 ### Shared UI Components
+
 - **Navigation**: Sidebar navigation with role-based menu items
 - **Layout**: Responsive admin layout with header and sidebar
 - **Charts**: Recharts integration for data visualization
@@ -202,17 +218,20 @@ app/admin/
 ## Getting Started
 
 ### Prerequisites
+
 - Admin or Owner role assignment
 - Valid authentication credentials
 - Database access with admin permissions
 
 ### Access Requirements
+
 1. **Authentication**: Login with admin-level credentials
 2. **Role Verification**: Ensure proper role assignment (admin/owner)
 3. **Permission Check**: Verify access to admin routes
 4. **Dashboard Access**: Navigate to `/admin` for main dashboard
 
 ### Initial Setup
+
 1. **User Role Assignment**: Assign admin roles to authorized users
 2. **Basic Configuration**: Set up categories, brands, and warehouses
 3. **Product Catalog**: Import or create initial product inventory
@@ -222,6 +241,7 @@ app/admin/
 ## Key Workflows
 
 ### Product Management Workflow
+
 1. **Category Setup**: Create product categories and hierarchies
 2. **Brand Management**: Add brands with logos and descriptions
 3. **Warehouse Configuration**: Set up inventory locations
@@ -230,6 +250,7 @@ app/admin/
 6. **SEO Optimization**: Configure meta tags and search settings
 
 ### Order Processing Workflow
+
 1. **Order Reception**: New orders appear in admin dashboard
 2. **Order Review**: Verify order details and payment status
 3. **Inventory Check**: Confirm product availability
@@ -238,6 +259,7 @@ app/admin/
 6. **Completion**: Mark orders as delivered and update analytics
 
 ### Content Management Workflow
+
 1. **Billboard Creation**: Design promotional banners with featured products
 2. **Collection Curation**: Group products for marketing campaigns
 3. **Promotion Setup**: Create brand-specific promotional campaigns
@@ -247,6 +269,7 @@ app/admin/
 ## Analytics & Reporting
 
 ### Dashboard Metrics
+
 - **Revenue Analytics**: Daily, weekly, monthly revenue tracking
 - **Order Statistics**: Order volume, average order value, conversion rates
 - **Product Performance**: Best sellers, inventory turnover, profit margins
@@ -254,6 +277,7 @@ app/admin/
 - **Inventory Status**: Stock levels, low inventory alerts, reorder points
 
 ### Reporting Features
+
 - **Custom Date Ranges**: Flexible reporting periods
 - **Export Capabilities**: CSV and PDF report generation
 - **Visual Charts**: Interactive charts and graphs
@@ -263,6 +287,7 @@ app/admin/
 ## Security & Compliance
 
 ### Data Protection
+
 - **Input Validation**: Zod schema validation for all forms
 - **SQL Injection Prevention**: Prisma ORM protection
 - **XSS Protection**: Content sanitization and validation
@@ -270,6 +295,7 @@ app/admin/
 - **Session Security**: Secure session management
 
 ### Access Control
+
 - **Route Protection**: Admin-only route access
 - **Permission Validation**: Granular permission checking
 - **Audit Trails**: Administrative action logging
@@ -279,6 +305,7 @@ app/admin/
 ## Performance Optimization
 
 ### Frontend Performance
+
 - **Code Splitting**: Route-based code splitting
 - **Lazy Loading**: Component lazy loading
 - **Image Optimization**: Next.js image optimization
@@ -286,6 +313,7 @@ app/admin/
 - **Bundle Optimization**: Tree shaking and minification
 
 ### Backend Performance
+
 - **Database Optimization**: Query optimization and indexing
 - **Caching Layer**: Redis caching for frequently accessed data
 - **API Optimization**: Efficient data fetching and pagination
@@ -294,6 +322,7 @@ app/admin/
 ## Troubleshooting
 
 ### Common Issues
+
 - **Permission Denied**: Verify user role and permissions
 - **Database Errors**: Check database connection and migrations
 - **File Upload Issues**: Verify UploadThing configuration
@@ -301,6 +330,7 @@ app/admin/
 - **Performance Issues**: Monitor database queries and caching
 
 ### Debug Tools
+
 - **Console Logging**: Comprehensive error logging
 - **Database Monitoring**: Query performance tracking
 - **API Testing**: Built-in API testing tools
@@ -309,12 +339,14 @@ app/admin/
 ## Support & Maintenance
 
 ### Regular Maintenance
+
 - **Database Backups**: Automated backup procedures
 - **Security Updates**: Regular dependency updates
 - **Performance Monitoring**: Continuous performance tracking
 - **User Feedback**: Regular admin user feedback collection
 
 ### Support Channels
+
 - **Documentation**: Comprehensive admin documentation
 - **Issue Tracking**: GitHub issue management
 - **Community Support**: Developer community forums
@@ -323,6 +355,7 @@ app/admin/
 ## Future Enhancements
 
 ### Planned Features
+
 - **Advanced Analytics**: Machine learning insights
 - **Mobile Admin App**: Native mobile administration
 - **API Webhooks**: External system integrations

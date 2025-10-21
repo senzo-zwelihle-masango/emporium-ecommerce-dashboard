@@ -222,7 +222,7 @@ const SignUpForm = ({ className, ...props }: React.ComponentProps<'form'>) => {
               )}
             </Button>
 
-             <Button
+            <Button
               variant="outline"
               type="button"
               className="w-full"

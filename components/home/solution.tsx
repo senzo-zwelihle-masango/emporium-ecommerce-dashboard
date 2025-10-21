@@ -57,18 +57,20 @@ const Solution = () => {
               <blockquote className="border-l-4 pl-4">
                 <p>
                   “The Emporium Dashboard helped us consolidate sales, stock, and marketing data in
-                  minutes. It&apos;s the kind of simplicity you don&apos;t realize you&apos;ve been missing until
-                  you have it.”
+                  minutes. It&apos;s the kind of simplicity you don&apos;t realize you&apos;ve been
+                  missing until you have it.”
                 </p>
 
                 <div className="mt-6 space-y-3">
-                  <cite className="block font-medium">Senzo Masango, Founder at Elysian Emporium Ecommerce</cite>
+                  <cite className="block font-medium">
+                    Senzo Masango, Founder at Elysian Emporium Ecommerce
+                  </cite>
                   <Image
                     src="https://94ig6q1xa3.ufs.sh/f/iU9Jr3jKqbAtXRzIt1Z6E5Xvmqbl7HLoBufOAjg0chxayiRt"
                     alt="Shopify Logo"
                     width={60}
                     height={60}
-                    className='rounded-md grayscale'
+                    className="rounded-md grayscale"
                   />
                 </div>
               </blockquote>

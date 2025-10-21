@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import {LogOutIcon, UserPenIcon } from 'lucide-react'
+import { LogOutIcon, UserPenIcon } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'

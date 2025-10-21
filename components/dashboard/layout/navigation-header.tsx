@@ -16,7 +16,7 @@ import {
 } from '@/components/ui/breadcrumb'
 import { Separator } from '@/components/ui/separator'
 import { SidebarTrigger } from '@/components/ui/sidebar'
-import {ThemeSwitcher} from '@/components/ui/theme-switcher'
+import { ThemeSwitcher } from '@/components/ui/theme-switcher'
 
 const NavigationHeader = () => {
   const pathname = usePathname()

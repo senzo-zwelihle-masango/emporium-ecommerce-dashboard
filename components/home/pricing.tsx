@@ -44,11 +44,14 @@ const Pricing = () => {
                 </span>
 
                 <div className="flex justify-center gap-3">
-                  <Button  size="lg" variant="default">
-                    <Link href="https://github.com/senzo-zwelihle-masango/elysian-emporium-ecommerce.git" target="_blank">
-                      Clone from GitHub
+                  <Button size="lg" variant="default">
+                    <Link
+                      href="https://github.com/senzo-zwelihle-masango/elysian-emporium-ecommerce.git"
+                      target="_blank"
+                    >
+                      GitHub
                     </Link>
-                    <GitHubIcon/>
+                    <GitHubIcon />
                   </Button>
                   {/* <Button asChild size="lg" variant="outline">
                     <Link href="/contact">Request Integration</Link>
